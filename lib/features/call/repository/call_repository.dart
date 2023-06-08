@@ -3,7 +3,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:whatsapp_ui/common/utils/utils.dart';
-import 'package:whatsapp_ui/features/call/screens/call_screen.dart';
 import 'package:whatsapp_ui/models/call.dart';
 import 'package:whatsapp_ui/models/group.dart' as model;
 
@@ -40,16 +39,16 @@ class CallRepository {
           .doc(senderCallData.receiverId)
           .set(receiverCallData.toMap());
 
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => CallScreen(
-            channelId: senderCallData.callId,
-            call: senderCallData,
-            isGroupChat: false,
-          ),
-        ),
-      );
+      // Navigator.push(
+      //   context,
+      //   MaterialPageRoute(
+      //     builder: (context) => CallScreen(
+      //       channelId: senderCallData.callId,
+      //       call: senderCallData,
+      //       isGroupChat: false,
+      //     ),
+      //   ),
+      // );
     } catch (e) {
       showSnackBar(context: context, content: e.toString());
     }
@@ -79,16 +78,16 @@ class CallRepository {
             .set(receiverCallData.toMap());
       }
 
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => CallScreen(
-            channelId: senderCallData.callId,
-            call: senderCallData,
-            isGroupChat: true,
-          ),
-        ),
-      );
+      // Navigator.push(
+      //   context,
+      //   MaterialPageRoute(
+      //     builder: (context) => CallScreen(
+      //       channelId: senderCallData.callId,
+      //       call: senderCallData,
+      //       isGroupChat: true,
+      //     ),
+      //   ),
+      // );
     } catch (e) {
       showSnackBar(context: context, content: e.toString());
     }
