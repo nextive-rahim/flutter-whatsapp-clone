@@ -15,7 +15,7 @@
 	<key>CFBundleName</key>
 	<string>whatsapp_ui</string>
 	<key>CFBundlePackageType</key>
-	<string>APPL</string>
+	<string>WhatsApp</string>
 	<key>CFBundleShortVersionString</key>
 	<string>$(FLUTTER_BUILD_NAME)</string>
 	<key>CFBundleSignature</key>
